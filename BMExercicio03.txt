@@ -1,0 +1,50 @@
+modelo ContaBancariaSimplificada
+inicio do modelo
+  dados nomeDoCorrentista, saldo, contaEhEspecial
+
+  operacao abreConta(nome, deposito, especial)
+    inicio
+      nomeDoCorrentista = nome
+      saldo = deposito
+      contaEhEspecial = especial
+    fim
+
+  operacao abreContaSimples(nome)
+    inicio
+      nomeDoCorrentista = nome
+      saldo = 0.00
+      contaEhEspecial = falso
+    fim
+
+  operacao deposita(valor)
+    inicio
+      saldo = saldo + valor
+    fim
+
+  operacao retira(valor)
+    inicio
+      se (contaEhEspecial == falso)
+      inicio
+        se (valor <= saldo)
+          saldo = saldo - valor
+      fim
+      senao
+        saldo = saldo - valor
+    fim
+
+  operacao mostraDados()
+    inicio
+      imprime "O nome do correntista eh "
+      imprime nomeDoCorrentista
+      imprime "O saldo eh "
+      imprime saldo
+      se (contaEhEspecial)
+        inicio
+          imprime "A conta eh especial"
+          se (saldo < 0)
+            imprime "Alerta! O saldo estah negativo"
+        fim
+      senao
+        imprime "A conta eh comum"
+    fim
+fim do modelo

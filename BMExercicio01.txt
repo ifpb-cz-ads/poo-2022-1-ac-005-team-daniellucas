@@ -1,0 +1,34 @@
+modelo LampadaDeSupermercado
+inicio do modelo
+  dados preco, tipo, marca
+
+  operacao setPreco(novoPreco)
+    inicio
+      preco = novoPreco
+    fim
+  
+  operacao getPreco()
+    inicio
+      retorna preco
+    fim
+  
+  operacao setTipo(novoTipo)
+    inicio
+      tipo = novoTipo
+    fim
+  
+  operacao getTipo()
+    inicio
+      retorna tipo
+    fim
+  
+  operacao setMarca(novaMarca)
+    inicio
+      marca = novaMarca
+    fim
+  
+  operacao getMarca()
+    inicio
+      retorna marca
+    fim
+fim do modelo
