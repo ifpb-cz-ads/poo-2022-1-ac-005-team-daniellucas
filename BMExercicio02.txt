@@ -1,0 +1,71 @@
+modelo TimeEmCampeonato
+inicio do modelo
+  dados vitorias, derrotas, empates, jogadores, treinador
+
+  operacao criarTime(jogadoresDoTime, treinadorDoTime)
+    inicio
+      adicionarJogadores(jogadoresDoTime)
+      setTreinador(treinadorDoTime)
+    fim
+
+  operacao adicionarJogadores(novosJogadores)
+    inicio
+      para cada jogador de novosJogadores
+        adicionarJogador(jogador)
+    fim
+
+  operacao adicionarJogador(novoJogador)
+    inicio
+      adicione novoJogador a jogadores
+    fim
+
+  operacao removerJogador(jogador)
+    inicio
+      remove jogador de jogadores
+    fim
+
+  operacao getJogadores()
+    inicio
+      retorna jogadores
+    fim
+
+  operacao setTreinador(novoTreinador)
+    inicio
+      treinador = novoTreinador
+    fim
+
+  operacao getTreinador()
+    inicio
+      retorna treinador
+    fim
+
+  operacao adicionarVitoria()
+    inicio
+      virorias++
+    fim
+  
+  operacao getVitorias()
+    inicio
+      returna virorias
+    fim
+
+  operacao adicionarDerrota()
+    inicio
+      derrotas++
+    fim
+  
+  operacao getDerrotas()
+    inicio
+      returna derrotas
+    fim
+
+  operacao adicionarEmpate()
+    inicio
+      empates++
+    fim
+
+  operacao getEmpates()
+    inicio
+      returna empates
+    fim
+fim do modelo
